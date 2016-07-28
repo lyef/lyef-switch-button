@@ -1,7 +1,7 @@
 {
-  "name": "lyef-react-component",
+  "name": "lyef-switch-button",
   "version": "0.1.0",
-  "description": "An opinionated boilerplate for reusable and declouped react components.",
+  "description": "A switch button (on/off) React component.",
   "main": "dist/Main.js",
   "scripts": {
     "build": "npm run clean && npm run babel && npm run minify",
@@ -33,7 +33,9 @@
   "keywords": [
     "react",
     "component",
-    "base"
+    "switch",
+    "button",
+    "es6"
   ],
   "author": "lyef (http://lyef.github.io/)",
   "license": "MIT",
