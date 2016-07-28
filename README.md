@@ -1,5 +1,5 @@
 # Lyef React Counter
-[![Build Status](https://travis-ci.org/lyef/lyef-switch-button.svg)](https://travis-ci.org/lyef/lyef-switch-button)
+[![Build Status](https://travis-ci.org/lyef/lyef-switch-button.svg?branch=master)](https://travis-ci.org/lyef/lyef-switch-button)
 ![Badge size](https://badge-size.herokuapp.com/lyef/lyef-switch-button/master/dist/Main.min.js.svg)
 ![Badge gzip size](https://badge-size.herokuapp.com/lyef/lyef-switch-button/master/dist/Main.min.js.svg?compression=gzip)
 
