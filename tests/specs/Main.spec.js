@@ -12,11 +12,6 @@ describe('<SwitchButton />', () => {
         expect(wrapper.find('.switch-button')).to.have.length(1);
     });
 
-    it('should have id props defined', () => {
-        const wrapper = shallow(<SwitchButton id="switch" />);
-        expect(wrapper.props().id).to.be.defined;
-    });
-
     describe('#LabelLeft', () => {
 
         it('should have LabelLeft component when passes labelLeft props', () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import SwitchButton from '../src/Main'; // This is our component
-import { storiesOf } from '@kadira/storybook';
+import { storiesOf, action } from '@kadira/storybook';
 
 storiesOf('SwitchButton', module)
     .add('simple switch button', () => (
@@ -16,14 +16,8 @@ storiesOf('SwitchButton', module)
         <SwitchButton id="switch" labelRight="right" labelLeft="left" />
     ))
     .add('start turn on', () => (
-        <SwitchButton id="switch" />
+        <SwitchButton id="switch" isChecked />
     ))
-    .add('logs when turned on', () => (
-        <SwitchButton id="switch" />
-    ))
-    .add('logs when turned off', () => (
-        <SwitchButton id="switch" />
-    ))
-    .add('logs everytime', () => (
-        <SwitchButton id="switch" />
+    .add('logs when change', () => (
+        <SwitchButton id="switch" action={action('changed!')} />
     ))

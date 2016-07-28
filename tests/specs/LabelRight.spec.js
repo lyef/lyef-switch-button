@@ -11,7 +11,7 @@ describe('<LabelRight />', () => {
         expect(wrapper.props().name).to.be.defined;
     });
 
-    it('should have label-right class when render', () => {
+    it('should haveti label-right class when render', () => {
         const wrapper = shallow(<LabelRight id="switch" name="right" />);
         expect(wrapper.find('.label-right')).to.have.length(1);
     });
