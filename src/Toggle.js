@@ -12,7 +12,3 @@ Toggle.propTypes = {
 };
 
 export default Toggle;
-
-
-
-

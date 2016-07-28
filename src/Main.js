@@ -3,26 +3,17 @@ import LabelLeft from './LabelLeft';
 import LabelRight from './LabelRight';
 import Toggle from './Toggle';
 
-class SwitchButton extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        return (
-            <div className="switch-button">
-                {this.props.labelLeft &&
-                    <LabelLeft id={this.props.id} name={this.props.labelLeft} />
-                }
-                <Toggle id={this.props.id} />
-                {this.props.labelRight &&
-                    <LabelRight id={this.props.id} name={this.props.labelRight} />
-                }
-            </div>
-        );
-    }
-}
-
+const SwitchButton = ({ labelLeft, labelRight, id }) => (
+    <div className="switch-button">
+        {labelLeft &&
+            <LabelLeft id={id} name={labelLeft} />
+        }
+        <Toggle id={id} />
+        {labelRight &&
+            <LabelRight id={id} name={labelRight} />
+        }
+    </div>
+);
 
 SwitchButton.propTypes = {
     id: PropTypes.string.isRequired,
