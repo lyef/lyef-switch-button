@@ -4,10 +4,10 @@ import { storiesOf } from '@kadira/storybook';
 
 storiesOf('SwitchButton', module)
     .add('simple switch button', () => (
-        <SwitchButton id="switch" id="switch-1" />
+        <SwitchButton id="switch" />
     ))
     .add('with right label', () => (
-        <SwitchButton id="switch-1" labelRight="right" />
+        <SwitchButton id="switch" labelRight="right" />
     ))
     .add('with left label', () => (
         <SwitchButton id="switch" labelLeft="left" />
