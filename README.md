@@ -13,6 +13,8 @@
 $ npm install --save lyef-switch-counter
 ```
 
+*Remember to import the styles on `css/main.css` folder to your project.*
+
 ## Basic Usage
 
 ```jsx
