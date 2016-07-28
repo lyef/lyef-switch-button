@@ -1,0 +1,62 @@
+.input {
+  visibility: hidden;
+  position: absolute;
+  margin-left: -9999px;
+}
+
+.label {
+    margin: 0 10px;
+    font-size: 16px;
+    font-family: sans-serif;
+    color: #666666;
+}
+
+.input + .toggle {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+
+.input + .toggle {
+  padding: 2px;
+  width: 60px;
+  height: 30px;
+  background-color: #dddddd;
+  border-radius: 30px;
+  transition: background 0.4s;
+  display: inline-block;
+  vertical-align: middle;
+}
+.input + .toggle:before,
+.input + .toggle:after {
+  display: block;
+  position: absolute;
+  content: "";
+}
+.input + .toggle:before {
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  right: 2px;
+  background-color: #fff;
+  border-radius: 30px;
+  transition: background 0.4s;
+}
+.input + .toggle:after {
+  top: 4px;
+  left: 4px;
+  bottom: 4px;
+  width: 26px;
+  background-color: #dddddd;
+  border-radius: 26px;
+  transition: margin 0.4s, background 0.4s;
+}
+.input:checked + .toggle {
+  background-color: #8ce196;
+}
+.input:checked + .toggle:after {
+  margin-left: 30px;
+  background-color: #8ce196;
+}
