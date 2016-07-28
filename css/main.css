@@ -11,6 +11,10 @@
     color: #666666;
 }
 
+.toggle-container {
+    display: inline-block;
+}
+
 .input + .toggle {
   display: block;
   position: relative;

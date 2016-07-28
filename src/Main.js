@@ -1,16 +1,33 @@
 import React, { PropTypes } from 'react';
+import LabelLeft from './LabelLeft';
+import LabelRight from './LabelRight';
+import Toggle from './Toggle';
 
-const Component = ({ name }) => (
-    <div className="switch-button">
-        <label className="label label-left" htmlFor="switch-flat">Lorem</label>
-        <input id="switch-flat" className="input" type="checkbox" />
-        <label className="toggle" htmlFor="switch-flat"></label>
-        <label className="label label-right" htmlFor="switch-flat">Lorem</label>
-    </div>
-);
+class SwitchButton extends React.Component {
+    constructor(props) {
+        super(props);
+    }
 
-Component.propTypes = {
-    name: PropTypes.string.isRequired,
+    render() {
+        return (
+            <div className="switch-button">
+                {this.props.labelLeft &&
+                    <LabelLeft id={this.props.id} name={this.props.labelLeft} />
+                }
+                <Toggle id={this.props.id} />
+                {this.props.labelRight &&
+                    <LabelRight id={this.props.id} name={this.props.labelRight} />
+                }
+            </div>
+        );
+    }
+}
+
+
+SwitchButton.propTypes = {
+    id: PropTypes.string.isRequired,
+    labelLeft: PropTypes.string,
+    labelRight: PropTypes.string,
 };
 
-export default Component;
+export default SwitchButton;
