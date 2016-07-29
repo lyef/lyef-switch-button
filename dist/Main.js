@@ -6,13 +6,9 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _LabelLeft = require('./LabelLeft');
+var _Label = require('./Label');
 
-var _LabelLeft2 = _interopRequireDefault(_LabelLeft);
-
-var _LabelRight = require('./LabelRight');
-
-var _LabelRight2 = _interopRequireDefault(_LabelRight);
+var _Label2 = _interopRequireDefault(_Label);
 
 var _Toggle = require('./Toggle');
 
@@ -41,9 +37,9 @@ var SwitchButton = function SwitchButton(_ref) {
     return _react2['default'].createElement(
         'div',
         { className: 'switch-button' },
-        labelLeft && _react2['default'].createElement(_LabelLeft2['default'], { id: id, name: labelLeft }),
+        labelLeft && _react2['default'].createElement(_Label2['default'], { className: 'label-left', id: id, name: labelLeft }),
         _react2['default'].createElement(_Toggle2['default'], { id: id, isChecked: isChecked, action: action }),
-        labelRight && _react2['default'].createElement(_LabelRight2['default'], { id: id, name: labelRight })
+        labelRight && _react2['default'].createElement(_Label2['default'], { className: 'label-right', id: id, name: labelRight })
     );
 };
 
