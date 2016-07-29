@@ -2,8 +2,7 @@ import React from 'react';
 import { expect } from 'chai';
 import { shallow, mount } from 'enzyme';
 import SwitchButton from '../../src/Main';
-import LabelLeft from '../../src/LabelLeft';
-import LabelRight from '../../src/LabelRight';
+import Label from '../../src/Label';
 
 describe('<SwitchButton />', () => {
 
@@ -12,29 +11,21 @@ describe('<SwitchButton />', () => {
         expect(wrapper.find('.switch-button')).to.have.length(1);
     });
 
-    describe('#LabelLeft', () => {
+    describe('#Label', () => {
 
-        it('should have LabelLeft component when passes labelLeft props', () => {
+        it('should not have Label component when not passes label props', () => {
+            const wrapper = mount(<SwitchButton id="switch" />);
+            expect(wrapper.find(Label)).to.have.length(0);
+        });
+
+        it('should have Label component when passes label props', () => {
             const wrapper = mount(<SwitchButton id="switch" labelLeft="left" />);
-            expect(wrapper.find(LabelLeft)).to.have.length(1);
+            expect(wrapper.find(Label)).to.have.length(1);
         });
 
-        it('should not have LabelLeft component when not passes labelLeft props', () => {
-            const wrapper = mount(<SwitchButton id="switch" />);
-            expect(wrapper.find(LabelLeft)).to.have.length(0);
-        });
-    });
-
-    describe('#LabelRight', () => {
-
-        it('should have LabelRight component when passes labelRight props', () => {
-            const wrapper = mount(<SwitchButton id="switch" labelRight="right" />);
-            expect(wrapper.find(LabelRight)).to.have.length(1);
-        });
-
-        it('should not have LabelRight component when not passes labelRight props', () => {
-            const wrapper = mount(<SwitchButton id="switch" />);
-            expect(wrapper.find(LabelRight)).to.have.length(0);
+        it('should have 2 label elements when pass labelLeft and labelRight props', () => {
+            const wrapper = mount(<SwitchButton id="switch" labelLeft="left" labelRight="right" />);
+            expect(wrapper.find('.label')).to.have.length(2);
         });
     });
 });

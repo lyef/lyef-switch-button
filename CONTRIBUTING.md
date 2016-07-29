@@ -22,8 +22,7 @@
 │   ├── Main.min.js
 │   └── Toggle.js
 ├── src
-│   ├── LabelLeft.js
-│   ├── LabelRight.js
+│   ├── Label.js
 │   ├── Main.js
 │   └── Toggle.js
 ├── stories
@@ -35,8 +34,7 @@
 │   ├── helpers
 │   │   └── setup.js
 │   └── specs
-│       ├── LabelLeft.spec.js
-│       ├── LabelRight.spec.js
+│       ├── Label.spec.js
 │       ├── Main.spec.js
 │       └── Toggle.spec.js
 ├── .babelrc

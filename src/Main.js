@@ -1,6 +1,5 @@
 import React, { PropTypes } from 'react';
-import LabelLeft from './LabelLeft';
-import LabelRight from './LabelRight';
+import Label from './Label';
 import Toggle from './Toggle';
 
 const propTypes = {
@@ -18,11 +17,11 @@ const defaultProps = {
 const SwitchButton = ({ id, labelLeft, labelRight, isChecked, action }) => (
     <div className="switch-button">
         {labelLeft &&
-            <LabelLeft id={id} name={labelLeft} />
+            <Label className="label-left" id={id} name={labelLeft} />
         }
         <Toggle id={id} isChecked={isChecked} action={action} />
         {labelRight &&
-            <LabelRight id={id} name={labelRight} />
+            <Label className="label-right" id={id} name={labelRight} />
         }
     </div>
 );
