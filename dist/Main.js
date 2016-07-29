@@ -37,9 +37,9 @@ var SwitchButton = function SwitchButton(_ref) {
     return _react2['default'].createElement(
         'div',
         { className: 'switch-button' },
-        labelLeft && _react2['default'].createElement(_Label2['default'], { className: 'label-left', id: id, name: labelLeft }),
+        labelLeft && _react2['default'].createElement(_Label2['default'], { id: id, name: labelLeft }),
         _react2['default'].createElement(_Toggle2['default'], { id: id, isChecked: isChecked, action: action }),
-        labelRight && _react2['default'].createElement(_Label2['default'], { className: 'label-right', id: id, name: labelRight })
+        labelRight && _react2['default'].createElement(_Label2['default'], { id: id, name: labelRight })
     );
 };
 

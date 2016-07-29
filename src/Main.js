@@ -17,11 +17,11 @@ const defaultProps = {
 const SwitchButton = ({ id, labelLeft, labelRight, isChecked, action }) => (
     <div className="switch-button">
         {labelLeft &&
-            <Label className="label-left" id={id} name={labelLeft} />
+            <Label id={id} name={labelLeft} />
         }
         <Toggle id={id} isChecked={isChecked} action={action} />
         {labelRight &&
-            <Label className="label-right" id={id} name={labelRight} />
+            <Label id={id} name={labelRight} />
         }
     </div>
 );
