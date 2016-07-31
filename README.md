@@ -2,6 +2,11 @@
 [![Build Status](https://travis-ci.org/lyef/lyef-switch-button.svg?branch=master)](https://travis-ci.org/lyef/lyef-switch-button)
 ![Badge size](https://badge-size.herokuapp.com/lyef/lyef-switch-button/master/dist/Main.min.js.svg)
 ![Badge gzip size](https://badge-size.herokuapp.com/lyef/lyef-switch-button/master/dist/Main.min.js.svg?compression=gzip)
+[![NPM version](https://badge-me.herokuapp.com/api/npm/lyef-switch-button.png)](http://badges.enytc.com/for/npm/lyef-switch-button)
+
+![Switch Button](switch-button.gif)
+
+> A switch button (on/off) React component.
 
 ## Demo
 
