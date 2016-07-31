@@ -15,7 +15,7 @@ const Toggle = ({ id, isChecked, action }) => (
 
 Toggle.propTypes = {
     id: PropTypes.string.isRequired,
-    isChecked: PropTypes.bool.isRequired,
+    isChecked: PropTypes.bool,
     action: PropTypes.func,
 };
 
