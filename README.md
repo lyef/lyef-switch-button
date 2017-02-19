@@ -15,7 +15,7 @@
 ## Installation
 
 ```sh
-$ npm install --save lyef-switch-counter
+$ npm install --save lyef-switch-button
 ```
 
 *Remember to import the styles on `css/main.css` folder to your project.*
