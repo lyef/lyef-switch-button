@@ -1,6 +1,7 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import Label from './Label';
 import Toggle from './Toggle';
+import PropTypes from 'prop-types';
 
 const propTypes = {
     id: PropTypes.string.isRequired,
