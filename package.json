@@ -1,6 +1,6 @@
 {
   "name": "lyef-switch-button",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "A switch button (on/off) React component.",
   "main": "dist/Main.js",
   "scripts": {
@@ -72,6 +72,7 @@
     "uglify-js": "^2.7.0"
   },
   "dependencies": {
+    "prop-types": "^15.5.8",
     "react": "^15.2.1",
     "react-dom": "^15.2.1"
   }
