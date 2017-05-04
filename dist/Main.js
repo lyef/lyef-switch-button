@@ -14,14 +14,18 @@ var _Toggle = require('./Toggle');
 
 var _Toggle2 = _interopRequireDefault(_Toggle);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
 var propTypes = {
-    id: _react.PropTypes.string.isRequired,
-    labelLeft: _react.PropTypes.string,
-    labelRight: _react.PropTypes.string,
-    isChecked: _react.PropTypes.bool,
-    action: _react.PropTypes.func
+    id: _propTypes2['default'].string.isRequired,
+    labelLeft: _propTypes2['default'].string,
+    labelRight: _propTypes2['default'].string,
+    isChecked: _propTypes2['default'].bool,
+    action: _propTypes2['default'].func
 };
 
 var defaultProps = {
@@ -29,11 +33,11 @@ var defaultProps = {
 };
 
 var SwitchButton = function SwitchButton(_ref) {
-    var id = _ref.id;
-    var labelLeft = _ref.labelLeft;
-    var labelRight = _ref.labelRight;
-    var isChecked = _ref.isChecked;
-    var action = _ref.action;
+    var id = _ref.id,
+        labelLeft = _ref.labelLeft,
+        labelRight = _ref.labelRight,
+        isChecked = _ref.isChecked,
+        action = _ref.action;
     return _react2['default'].createElement(
         'div',
         { className: 'switch-button' },
