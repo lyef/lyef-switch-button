@@ -1,6 +1,6 @@
 import React from 'react';
 import SwitchButton from '../src/Main'; // This is our component
-import { storiesOf, action } from '@kadira/storybook';
+import { storiesOf, action } from '@storybook/react';
 
 storiesOf('SwitchButton', module)
     .add('simple switch button', () => (
