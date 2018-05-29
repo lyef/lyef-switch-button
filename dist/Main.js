@@ -25,11 +25,13 @@ var propTypes = {
     labelLeft: _propTypes2['default'].string,
     labelRight: _propTypes2['default'].string,
     isChecked: _propTypes2['default'].bool,
-    action: _propTypes2['default'].func
+    action: _propTypes2['default'].func,
+    disabled: _propTypes2['default'].bool
 };
 
 var defaultProps = {
-    isChecked: false
+    isChecked: false,
+    disabled: false
 };
 
 var SwitchButton = function SwitchButton(_ref) {
@@ -37,12 +39,13 @@ var SwitchButton = function SwitchButton(_ref) {
         labelLeft = _ref.labelLeft,
         labelRight = _ref.labelRight,
         isChecked = _ref.isChecked,
-        action = _ref.action;
+        action = _ref.action,
+        disabled = _ref.disabled;
     return _react2['default'].createElement(
         'div',
-        { className: 'switch-button' },
+        { className: disabled ? 'switch-button disabled' : 'switch-button' },
         labelLeft && _react2['default'].createElement(_Label2['default'], { id: id, name: labelLeft }),
-        _react2['default'].createElement(_Toggle2['default'], { id: id, isChecked: isChecked, action: action }),
+        _react2['default'].createElement(_Toggle2['default'], { id: id, isChecked: isChecked, action: action, disabled: disabled }),
         labelRight && _react2['default'].createElement(_Label2['default'], { id: id, name: labelRight })
     );
 };
