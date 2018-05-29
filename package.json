@@ -1,6 +1,6 @@
 {
   "name": "lyef-switch-button",
-  "version": "1.3.2",
+  "version": "1.4.0",
   "description": "A switch button (on/off) React component.",
   "main": "dist/Main.js",
   "scripts": {
