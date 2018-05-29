@@ -27,5 +27,9 @@ describe('<SwitchButton />', () => {
             const wrapper = mount(<SwitchButton id="switch" labelLeft="left" labelRight="right" />);
             expect(wrapper.find('.label')).to.have.length(2);
         });
+        it('should have the disabled class when disabled prop is true', () => {
+            const wrapper = mount(<SwitchButton id="switch" labelLeft="left" labelRight="right" disabled />);
+            expect(wrapper.hasClass('disabled')).to.equal(true);
+        });
     });
 });
