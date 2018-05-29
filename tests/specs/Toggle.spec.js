@@ -29,4 +29,8 @@ describe('<Toggle />', () => {
         wrapper.find('input').simulate('change');
         expect(changed).to.have.been.called;
     });
+    it('should be disabled when disabled prop is set to true', () => {
+        const wrapper = mount(<Toggle id="switch" disabled />);
+        expect(wrapper.find('#switch').prop('disabled')).to.equal(true);
+    });
 });

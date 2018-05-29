@@ -9,18 +9,20 @@ const propTypes = {
     labelRight: PropTypes.string,
     isChecked: PropTypes.bool,
     action: PropTypes.func,
+    disabled: PropTypes.bool,
 };
 
 const defaultProps = {
     isChecked: false,
+    disabled: false,
 };
 
-const SwitchButton = ({ id, labelLeft, labelRight, isChecked, action }) => (
-    <div className="switch-button">
+const SwitchButton = ({ id, labelLeft, labelRight, isChecked, action, disabled }) => (
+    <div className={disabled ? 'switch-button disabled' : 'switch-button'}>
         {labelLeft &&
             <Label id={id} name={labelLeft} />
         }
-        <Toggle id={id} isChecked={isChecked} action={action} />
+        <Toggle id={id} isChecked={isChecked} action={action} disabled={disabled} />
         {labelRight &&
             <Label id={id} name={labelRight} />
         }
