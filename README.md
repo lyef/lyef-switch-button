@@ -33,6 +33,7 @@ render() {
             labelLeft="left"
             labelRight="right"
             isChecked
+            disabled
             action={callbackFunction}
         />
     );
@@ -46,6 +47,7 @@ render() {
 - `labelLeft` (string) - create a label to the left of the button
 - `labelRight` (string) - create a label to the right of the button
 - `isChecked` (bool) - start the button as checked
+- `disabled` (bool) - disable the button for user interaction
 - `action` (func) - call a function when the input is changed
 
 ## Architecture
