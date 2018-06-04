@@ -22,8 +22,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'd
 
 var propTypes = {
     id: _propTypes2['default'].string.isRequired,
-    labelLeft: _propTypes2['default'].string,
-    labelRight: _propTypes2['default'].string,
+    labelLeft: _propTypes2['default'].oneOfType([_propTypes2['default'].element, _propTypes2['default'].string]),
+    labelRight: _propTypes2['default'].oneOfType([_propTypes2['default'].element, _propTypes2['default'].string]),
     isChecked: _propTypes2['default'].bool,
     action: _propTypes2['default'].func,
     disabled: _propTypes2['default'].bool
@@ -44,9 +44,9 @@ var SwitchButton = function SwitchButton(_ref) {
     return _react2['default'].createElement(
         'div',
         { className: disabled ? 'switch-button disabled' : 'switch-button' },
-        labelLeft && _react2['default'].createElement(_Label2['default'], { id: id, name: labelLeft }),
+        labelLeft && (typeof labelLeft === 'string' ? _react2['default'].createElement(_Label2['default'], { id: id, name: labelLeft }) : labelLeft),
         _react2['default'].createElement(_Toggle2['default'], { id: id, isChecked: isChecked, action: action, disabled: disabled }),
-        labelRight && _react2['default'].createElement(_Label2['default'], { id: id, name: labelRight })
+        labelRight && (typeof labelRight === 'string' ? _react2['default'].createElement(_Label2['default'], { id: id, name: labelRight }) : labelRight)
     );
 };
 
