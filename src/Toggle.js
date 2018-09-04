@@ -8,7 +8,7 @@ const Toggle = ({ id, isChecked, action, disabled }) => (
             className="input"
             type="checkbox"
             disabled={disabled}
-            defaultChecked={isChecked}
+            checked={isChecked}
             onChange={action}
         />
         <label className="toggle" htmlFor={id}></label>
@@ -20,6 +20,12 @@ Toggle.propTypes = {
     isChecked: PropTypes.bool,
     action: PropTypes.func,
     disabled: PropTypes.bool,
+};
+
+Toggle.defaultProps = {
+    action: () => {},
+    isChecked: false,
+    disabled: false,
 };
 
 export default Toggle;

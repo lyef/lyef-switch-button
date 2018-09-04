@@ -1,5 +1,5 @@
 import React from 'react';
-import SwitchButton from '../src/Main'; // This is our component
+import SwitchButton from './SwitchButtonContainer'; // This is our component
 import Label from '../src/Label'; // This is our component
 import { storiesOf, action } from '@storybook/react';
 
