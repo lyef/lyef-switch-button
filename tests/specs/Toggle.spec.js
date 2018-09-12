@@ -4,6 +4,7 @@ import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
 import { shallow, mount } from 'enzyme';
 import Toggle from '../../src/Toggle';
+
 chai.use(sinonChai);
 
 describe('<Toggle />', () => {
@@ -29,8 +30,19 @@ describe('<Toggle />', () => {
         wrapper.find('input').simulate('change');
         expect(changed).to.have.been.called;
     });
+
     it('should be disabled when disabled prop is set to true', () => {
         const wrapper = mount(<Toggle id="switch" disabled />);
         expect(wrapper.find('#switch').prop('disabled')).to.equal(true);
+    });
+
+    it('should not be checked when isChecked prop is set to false', () => {
+        const wrapper = mount(<Toggle id="switch" isChecked={false} />);
+        expect(wrapper.find("#switch").prop('checked')).to.equal(false);
+    });
+
+    it('should be checked when isChecked prop is set to true', () => {
+        const wrapper = mount(<Toggle id="switch" isChecked />);
+        expect(wrapper.find("#switch").prop('checked')).to.equal(true);
     });
 });
