@@ -25,7 +25,7 @@ var Toggle = function Toggle(_ref) {
             className: 'input',
             type: 'checkbox',
             disabled: disabled,
-            defaultChecked: isChecked,
+            checked: isChecked,
             onChange: action
         }),
         _react2['default'].createElement('label', { className: 'toggle', htmlFor: id })
@@ -37,6 +37,16 @@ Toggle.propTypes = {
     isChecked: _propTypes2['default'].bool,
     action: _propTypes2['default'].func,
     disabled: _propTypes2['default'].bool
+};
+
+Toggle.defaultProps = {
+    action: function () {
+        function action() {}
+
+        return action;
+    }(),
+    isChecked: false,
+    disabled: false
 };
 
 exports['default'] = Toggle;
